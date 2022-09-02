@@ -6,7 +6,7 @@ public class Fisica extends Pessoa {
 
 	public Fisica(String nome, double rendaAnual, double gastoComSaude) {
 		super(nome, rendaAnual);
-		GastoComSaude = gastoComSaude;
+		this.GastoComSaude = gastoComSaude;
 	}
 
 	public double getGastoComSaude() {
@@ -20,10 +20,13 @@ public class Fisica extends Pessoa {
 	@Override
 	public double imposto() {
 		double impostoFisico;
-		if(getRendaAnual() < 20000.0) {
+		if (getRendaAnual() < 20000.0) {
 			impostoFisico = (getRendaAnual() * 0.15) - (GastoComSaude * 0.5);
 		} else {
 			impostoFisico = (getRendaAnual() * 0.25) - (GastoComSaude * 0.5);
+		}
+		if (impostoFisico < 0) {
+			impostoFisico = 0;
 		}
 		return impostoFisico;
 	}
