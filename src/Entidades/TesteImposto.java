@@ -1,11 +1,16 @@
 package Entidades;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class TesteImposto {
 	public static void main(String[] args) {
-		Pessoa fisica = new Fisica("tiago", 10000, 0);
-		Pessoa juridica = new Juridica("joao", 5000, 20);
+		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println(fisica.imposto());
-		System.out.println(juridica.imposto());
+		List<Pessoa> list = new ArrayList <Pessoa>();
+		
+		teclado.close();
+
 	}
 }
