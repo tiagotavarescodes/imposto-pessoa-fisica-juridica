@@ -1,7 +1,6 @@
 package Entidades;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,9 +32,14 @@ public class TesteImposto {
 				System.out.print("Número de funcionários: ");
 				int numeroDeFuncionarios = teclado.nextInt();
 				Juridica y = new Juridica(nome, rendaAnual, numeroDeFuncionarios);
-				
+
 				list.add(y);
-				
+
+			}
+			
+			System.out.println("Impostos pagos: ");
+			for (Pessoa p : list) {
+				System.out.println(p.getNome() + ": " + p.imposto() );
 			}
 
 		}

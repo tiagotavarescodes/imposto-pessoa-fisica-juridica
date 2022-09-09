@@ -9,6 +9,14 @@ public class Juridica extends Pessoa {
 		this.numeroDeFuncionarios = numeroDeFuncionarios;
 	}
 
+	public int getNumeroDeFuncionarios() {
+		return numeroDeFuncionarios;
+	}
+
+	public void setNumeroDeFuncionarios(int numeroDeFuncionarios) {
+		this.numeroDeFuncionarios = numeroDeFuncionarios;
+	}
+
 	@Override
 	public double imposto() {
 		double impostoJuridico;
