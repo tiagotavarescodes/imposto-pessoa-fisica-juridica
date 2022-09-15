@@ -35,15 +35,19 @@ public class TesteImposto {
 
 				list.add(y);
 
-			}
 			
-			System.out.println("Impostos pagos: ");
-			for (Pessoa p : list) {
-				System.out.println(p.getNome() + ": " + p.imposto() );
+			
+		
 			}
 
 		}
+		
+		System.out.println("Impostos pagos: ");
+		for (Pessoa p : list) {
+			System.out.println(p.getNome() + ": " + p.imposto() );
+			
 		teclado.close();
 
+	}
 	}
 }
